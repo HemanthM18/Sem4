@@ -1,29 +1,80 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+h1:active {
+  transform: scale(1.2);
+}
+
 .grid {
-    position: absolute;
-    width: 560px;
-    height: 300px;
-    border: solid 1px black;
-    margin-top: 100px;
-  }
-  
-  .user {
-    position: absolute;
-    width: 100px;
-    height: 20px;
-    background-color: blueviolet;
-  }
-  
-  .block {
-    position: absolute;
-    width: 100px;
-    height: 20px;
-    background-color: blue;
-  }
-  
-  .ball {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: red;
-  }
+  position: relative;
+  width: 560px;
+  height: 300px;
+  border: solid 2px white;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.user {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  border-radius: 10px;
+  transition: left 0.1s ease-in-out;
+}
+
+.block {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background: linear-gradient(90deg, #ffcc00, #ff8800);
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.block.removed {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff0000, #990000);
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.7);
+  transition: left 0.02s linear, bottom 0.02s linear;
+}
+
+.win, .lose {
+  animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+  0% { color: white; }
+  100% { color: yellow; }
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
