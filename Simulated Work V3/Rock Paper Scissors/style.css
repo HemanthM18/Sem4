@@ -1,0 +1,48 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  /* Scoreboard Styling */
+  .scoreboard {
+    margin-bottom: 30px;
+  }
+  
+  .scoreboard h2 {
+    margin: 10px 0;
+    font-weight: normal;
+  }
+  
+  /* Choices (Buttons) Styling */
+  .choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  button img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
