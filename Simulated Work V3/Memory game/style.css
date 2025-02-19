@@ -1,6 +1,35 @@
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 400px;
-    height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.grid img {
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.matched {
+  animation: vanish 0.5s forwards;
+}
+
+@keyframes vanish {
+  0% {
+    opacity: 1;
+    transform: scale(1);
   }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
