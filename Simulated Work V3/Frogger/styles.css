@@ -1,40 +1,93 @@
-.grid {
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+  
+  #start-screen {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  #start-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  #start-button:hover {
+    background-color: #45a049;
+  }
+  
+  .fade-out {
+    animation: fadeOut 0.5s ease forwards;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .grid {
     border: 1px solid black;
     height: 180px;
     width: 180px;
     display: flex;
     flex-wrap: wrap;
-}
-
-.grid div {
+  }
+  
+  .grid div {
     height: 20px;
     width: 20px;
-}
-
-.ending-block {
+  }
+  
+  .ending-block {
     background-color: red;
-}
-
-.starting-block {
+  }
+  
+  .starting-block {
     background-color: blue;
-}
-.l1, .l2, .l3 {
+  }
+  
+  .l1, .l2, .l3 {
     background-color: brown;
-}
-
-.l4, .l5 {
+  }
+  
+  .l4, .l5 {
     background-color: lightblue;
-}
-
-.c1 {
+  }
+  
+  .c1 {
     background-color: black;
-}
-
-.c2, .c3 {
+  }
+  
+  .c2, .c3 {
     background-color: lightgrey;
-}
-
-.frog {
+  }
+  
+  .frog {
     background-color: green;
-}
-
+  }
+  
