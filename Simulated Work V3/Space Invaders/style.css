@@ -1,29 +1,41 @@
+body {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 100vh;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+}
+
 .grid {
-	width: 300px;
-	height: 300px;
-	border: solid black 1px;
-	display: flex;
-	flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .grid div {
-	width: 20px;
-	height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 .invader {
-	background-color: purple;
-	border-radius: 10px;
+    background-image: url('images/invader.png');
+    background-size: cover;
 }
 
 .shooter {
-	background-color: green;
+    background-image: url('images/shooter.png');
+    background-size: cover;
 }
 
 .laser {
-	background-color: orange;
+    background-image: url('images/laser.png');
+    background-size: cover;
 }
 
 .boom {
-	background-color: red;
+    background-color: red;
+    border-radius: 50%;
 }
